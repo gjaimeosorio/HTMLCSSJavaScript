@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referencias personales</title>
+    <title>Estudios realizados</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <section class="container-index">
         <header>
             <hgroup>
-                <h1>Hoja de Vida</h1>
+                <div id="titulo-index">
+                    <h1>Hoja de Vida</h1>
+                </div>
+                <div id="select-style">
+                    <select class="selector" name="selector">
+                        <optgroup label="Estilos">
+                        <option value="1">1. darkslategray</option>
+                        <option value="2">2. Dark</option>
+                        <option value="3">3. Light</option>
+                        </optgroup>
+                    </select>
+                </div>
                 <h2><b>Gabriel Jaime Osorio Hernández</b></h2>
                 <h3>Ingeniero Especialista</h3>
             </hgroup>
@@ -19,7 +30,7 @@
         <article>
             <figure>
                 <img src='static/img/foto_gjoh.jpg' alt="Foto perfil"></a>
-                <figcaption><i>Estudios</i></figcaption> 
+                <figcaption><i>Foto del perfil</i></figcaption> 
             </figure>
             <aside>
                 <hgroup>
@@ -54,12 +65,13 @@
         </article>
         <article>
             <p></p>
-            <a href="index.html"><b>Volver al inicio</b></a>
+            <button><a href="index.html"><b>Volver al inicio</b></a></button>
             <p></p>
         </article>  
-    </section>
-    <footer>
-        <p>&#169; 2022 <a href="#">Gabriel J. Osorio H.</a></p>
+        <footer>
+            <p>&#169; 2022 <a href="#">Gabriel J. Osorio H.</a></p>
         </footer>
+    </section>
+    <script type="text/javascript" src="static/js/interaction.js"></script>
 </body>
 </html>

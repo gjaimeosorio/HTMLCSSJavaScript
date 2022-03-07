@@ -48,7 +48,7 @@ ol, ul {
 }
 
 footer {
-    color: white; 
+    color: hsl(0, 0%, 100%); 
     text-align: center; 
     font-size: small;
 }
@@ -78,3 +78,17 @@ button:active {
     background-color:darkgreen;
     color: white;
   }
+
+#titulo-index {
+    display: inline-block;
+    text-align: center;
+}
+
+#select-style {
+    display: inline-block;
+    float: right;
+}
+
+.sofka0, .sofka1, .sofka2, .sofka3, .eafit0, .eafit1, .eafit2, .eafit3, .epm0, .epm1, .epm2, .epm3, .cafe0, .cafe1, .cafe2, .cafe3 {
+    display: block;
+}

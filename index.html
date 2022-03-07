@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <section class="container-index">
+    <section class="container-index" id="container-index">
         <header>
             <hgroup>
-                <h1>Hoja de Vida</h1>
+                <div id="titulo-index">
+                    <h1>Hoja de Vida</h1>
+                </div>
+                <div id="select-style">
+                    <select class="selector" name="selector">
+                        <optgroup label="Estilos">
+                        <option value="1">1. darkslategray</option>
+                        <option value="2">2. Dark</option>
+                        <option value="3">3. Light</option>
+                        </optgroup>
+                    </select>
+                </div>
                 <h2><b>Gabriel Jaime Osorio Hernández</b></h2>
                 <h3>Ingeniero Especialista</h3>
             </hgroup>
@@ -53,5 +64,6 @@
             <p >&#169; 2022 <a href="#">Gabriel J. Osorio H.</a></p>
         </footer> 
     </section>
+    <script type="text/javascript" src="static/js/interaction.js"></script>
 </body>
 </html>

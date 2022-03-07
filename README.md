@@ -1,1 +1,1 @@
-# Hoja de vida en HTML
+# Hoja de vida en HTML5 con estilos en un archivo aparte de CSS3

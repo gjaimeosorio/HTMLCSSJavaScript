@@ -1,24 +1,36 @@
-const selectElement = document.querySelector(".selector");
+var sectionContainer = document.querySelector("section")
+var selectElement = document.querySelector("select");
+var lastSelected = localStorage.getItem("tema");
+
+selectElement.value = lastSelected
+changeTheme(lastSelected)
 
 selectElement.addEventListener("change", (event) => {
-    switch(event.target.value) {
+    changeTheme(event.target.value)
+});
+
+function changeTheme (val) {
+    switch(val) {
         case "1":
-            document.querySelector(".container-index").style.backgroundColor = "darkslategray";
-            document.getElementById("container-index").style.fontFamily = "Arial, Helvetica, sans-serif";
-            guardarCookie("seleccion",event.target.value)
+            lastSelected = "1";
+            sectionContainer.style.backgroundColor = "darkslategray";
+            sectionContainer.style.fontFamily = "Arial, Helvetica, sans-serif";
+            localStorage.setItem("tema", lastSelected);
             break;
         case "2":
-            document.querySelector(".container-index").style.backgroundColor = "black";
-            document.getElementById("container-index").style.fontFamily = "Arial";
-            guardarCookie("seleccion",event.target.value)
+            lastSelected = "2";;
+            sectionContainer.style.backgroundColor = "black";
+            sectionContainer.style.fontFamily = "Arial";
+            localStorage.setItem("tema", lastSelected);
             break;
         case "3":
-            document.querySelector(".container-index").style.backgroundColor = "lightgray";
-            document.getElementById("container-index").style.fontFamily = "Arial";
-            guardarCookie("seleccion",event.target.value)
+            lastSelected = "3";
+            sectionContainer.style.backgroundColor = "lightgray";
+            sectionContainer.style.fontFamily = "Arial";
+            localStorage.setItem("tema", lastSelected);
             break;
         }
-});
+}
 
 const element = document.getElementById("sofka-exp");
 element.addEventListener("click", myFunction);
@@ -67,20 +79,3 @@ function myFunction4() {
         }
     }
 }
-
-function guardarCookie(nombre,valor) {
-    document.cookie = nombre+"="+valor;
-}
-
-function leerCookie(nombre) {
-    var lista = document.cookie.split(";");
-    for (i in lista) {
-        var busca = lista[i].search(nombre);
-        if (busca > -1) {micookie=lista[i]}
-        }
-    var igual = micookie.indexOf("=");
-    var valor = micookie.substring(igual+1);
-    return valor;
-    }
-
-
